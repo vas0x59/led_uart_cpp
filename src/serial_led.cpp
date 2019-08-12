@@ -15,6 +15,10 @@ LED::LED()
     led_count = 255;
 }
 
+LED::~LED(){
+    stop();
+}
+
 
 void LED::start()
 {

@@ -1,3 +1,7 @@
 *.out
 .vscode/*
 .vscode
+CMakeCache.txt
+*.cmake
+CMakeFiles/*
+CMakeFiles

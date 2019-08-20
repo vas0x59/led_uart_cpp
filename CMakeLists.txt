@@ -15,13 +15,13 @@ add_library(led_uart_cpp  SHARED
     ./src/checksum.h
 )
 
-# add_executable(test_lib example/test_lib.cpp)
+add_executable(test_lib EXCLUDE_FROM_ALL example/test_lib.cpp)
 
-# # target_link_libraries(led_uart_cpp
-# #     pthread
-# # )
-
-# target_link_libraries(test_lib
+# target_link_libraries(led_uart_cpp
 #     pthread
-#     ${PROJECT_SOURCE_DIR}/libled_uart_cpp.so
 # )
+
+target_link_libraries(test_lib
+    pthread
+    ${PROJECT_SOURCE_DIR}/libled_uart_cpp.so
+)
